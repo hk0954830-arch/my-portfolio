@@ -1,0 +1,1671 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aqsa Hidayat | Data Analyst Portfolio</title>
+<meta name="description" content="Portfolio of Aqsa Hidayat, aspiring Data Analyst specializing in Power BI and Data Analytics.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+    --bg:#0b0b0b;
+    --card:#141414;
+    --gold:#d8b56d;
+    --gold-light:#f0d69b;
+    --white:#f7f5f0;
+    --muted:#aaa69d;
+    --border:#2b2924;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body {
+    background:var(--bg);
+    color:var(--white);
+    font-family:'DM Sans',Arial,sans-serif;
+    line-height:1.7;
+}
+
+a {
+    color:inherit;
+    text-decoration:none;
+}
+
+button { font-family:inherit; }
+
+.container {
+    width:min(1120px,90%);
+    margin:auto;
+}
+
+/* NAVIGATION */
+
+header {
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(11,11,11,.96);
+    border-bottom:1px solid var(--border);
+    backdrop-filter:blur(12px);
+}
+
+.navbar {
+    min-height:76px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo {
+    font-size:23px;
+    font-weight:700;
+    letter-spacing:-1px;
+}
+
+.logo span { color:var(--gold); }
+
+.nav-links {
+    display:flex;
+    align-items:center;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a {
+    color:var(--muted);
+    font-size:13px;
+    transition:.25s;
+}
+
+.nav-links a:hover { color:var(--gold); }
+
+.nav-contact {
+    border:1px solid var(--gold);
+    color:var(--gold)!important;
+    padding:10px 16px;
+    border-radius:4px;
+}
+
+.menu-btn {
+    display:none;
+    background:transparent;
+    color:var(--gold);
+    border:1px solid var(--border);
+    border-radius:5px;
+    padding:5px 10px;
+    font-size:23px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero {
+    min-height:610px;
+    display:grid;
+    grid-template-columns:1.35fr .85fr;
+    align-items:center;
+    gap:70px;
+    padding:75px 0 85px;
+}
+
+.eyebrow {
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    color:var(--gold);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:23px;
+}
+
+.eyebrow::before {
+    content:"";
+    width:25px;
+    height:1px;
+    background:var(--gold);
+}
+
+.hero h1 {
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:clamp(43px,5.7vw,70px);
+    line-height:1.13;
+    font-weight:600;
+}
+
+.hero h1 span {
+    display:block;
+    color:var(--gold);
+}
+
+.hero h2 {
+    margin-top:23px;
+    font-size:18px;
+    font-weight:500;
+    color:#e4dfd4;
+}
+
+.hero-description {
+    margin-top:18px;
+    max-width:570px;
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.9;
+}
+
+.buttons {
+    display:flex;
+    flex-wrap:wrap;
+    gap:13px;
+    margin-top:32px;
+}
+
+.btn {
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    padding:13px 20px;
+    border-radius:4px;
+    border:1px solid var(--gold);
+    font-size:13px;
+    font-weight:700;
+    transition:.25s;
+}
+
+.btn-primary {
+    background:var(--gold);
+    color:#111;
+}
+
+.btn-primary:hover {
+    background:var(--gold-light);
+    transform:translateY(-2px);
+}
+
+.btn-outline { color:var(--gold); }
+
+.btn-outline:hover { background:#d8b56d15; }
+
+/* INITIALS CARD */
+
+.hero-visual {
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:350px;
+}
+
+.gold-frame {
+    position:absolute;
+    width:270px;
+    height:330px;
+    border:1px solid #d8b56d70;
+    transform:rotate(6deg);
+}
+
+.initials-card {
+    position:relative;
+    width:270px;
+    height:330px;
+    background:linear-gradient(145deg,#242016,#111);
+    border:1px solid #6c5832;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 20px 70px #0008;
+}
+
+.initials {
+    font-family:'Playfair Display',Georgia,serif;
+    color:var(--gold);
+    font-size:100px;
+    letter-spacing:-8px;
+}
+
+.initials-line {
+    width:55px;
+    height:2px;
+    background:var(--gold);
+    margin:18px 0;
+}
+
+.initials-card p {
+    color:var(--muted);
+    font-size:10px;
+    letter-spacing:3px;
+}
+
+.floating-label {
+    position:absolute;
+    bottom:12px;
+    right:-12px;
+    background:#17150f;
+    border:1px solid #57482a;
+    color:var(--gold-light);
+    padding:12px 16px;
+    font-size:11px;
+}
+
+/* COMMON SECTIONS */
+
+section.content-section {
+    padding:95px 0;
+    border-top:1px solid var(--border);
+    scroll-margin-top:75px;
+}
+
+.section-heading {
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:clamp(31px,4vw,43px);
+    line-height:1.3;
+    margin-bottom:18px;
+}
+
+.section-heading span { color:var(--gold); }
+
+.section-intro {
+    color:var(--muted);
+    max-width:650px;
+    font-size:14px;
+    margin-bottom:38px;
+}
+
+/* ABOUT */
+
+.about-grid {
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:65px;
+}
+
+.about-label {
+    color:var(--gold);
+    font-size:12px;
+    letter-spacing:2px;
+    margin-top:10px;
+}
+
+.about-text p {
+    color:var(--muted);
+    font-size:14px;
+    margin-bottom:17px;
+}
+
+.education-card {
+    margin-top:27px;
+    background:var(--card);
+    border-left:2px solid var(--gold);
+    padding:19px 22px;
+}
+
+.education-card h3 {
+    font-size:15px;
+    margin-bottom:6px;
+}
+
+.education-card p {
+    font-size:12px;
+    color:var(--muted);
+    margin:0;
+}
+
+/* SKILLS */
+
+.skills-grid {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+}
+
+.skill-card {
+    background:var(--card);
+    border:1px solid var(--border);
+    padding:21px 17px;
+    min-height:100px;
+    transition:.25s;
+}
+
+.skill-card:hover {
+    border-color:var(--gold);
+    transform:translateY(-3px);
+}
+
+.skill-number {
+    display:block;
+    color:var(--gold);
+    font-size:10px;
+    letter-spacing:1px;
+    margin-bottom:9px;
+}
+
+.skill-card h3 {
+    font-size:13px;
+    font-weight:600;
+}
+
+.skill-note {
+    margin-top:20px;
+    color:var(--muted);
+    font-size:11px;
+}
+
+/* PROJECTS */
+
+.projects-grid {
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.project-card {
+    position:relative;
+    overflow:hidden;
+    padding:30px;
+    background:var(--card);
+    border:1px solid var(--border);
+    transition:.3s;
+    display:flex;
+    flex-direction:column;
+}
+
+.project-card:hover {
+    border-color:#8d733f;
+    transform:translateY(-4px);
+}
+
+.project-image {
+    display:block;
+    width:100%;
+    height:230px;
+    object-fit:contain;
+    background:#090909;
+    border-radius:6px;
+    margin-bottom:22px;
+    border:1px solid var(--border);
+}
+
+.project-top {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.project-number {
+    color:var(--gold);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:32px;
+}
+
+.project-symbol {
+    color:var(--gold);
+    font-size:25px;
+}
+
+.project-card h3 {
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:23px;
+    margin-bottom:12px;
+}
+
+.project-card p {
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.8;
+}
+
+.tags {
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:22px;
+}
+
+.tags span {
+    border:1px solid #55482d;
+    color:var(--gold-light);
+    padding:5px 10px;
+    font-size:10px;
+    border-radius:2px;
+}
+
+.project-action {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    align-self:flex-start;
+    margin-top:25px;
+    padding:11px 17px;
+    background:transparent;
+    border:1px solid var(--gold);
+    border-radius:4px;
+    color:var(--gold-light);
+    font-size:12px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.project-action:hover {
+    background:var(--gold);
+    color:#111;
+    transform:translateY(-2px);
+}
+
+.project-note {
+    margin-top:22px;
+    color:var(--muted);
+    font-size:11px;
+}
+
+/* PROJECT DETAILS POPUP */
+
+.project-modal {
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:1000;
+    padding:20px;
+    background:rgba(0,0,0,.85);
+    overflow-y:auto;
+    align-items:center;
+    justify-content:center;
+}
+
+.project-modal.open { display:flex; }
+
+.project-modal-content {
+    position:relative;
+    width:min(850px,100%);
+    max-height:90vh;
+    overflow-y:auto;
+    padding:35px;
+    background:#141414;
+    border:1px solid #80683c;
+    border-radius:8px;
+    box-shadow:0 25px 90px #000;
+}
+
+.modal-close {
+    position:sticky;
+    top:0;
+    float:right;
+    width:38px;
+    height:38px;
+    margin:-12px -12px 10px 15px;
+    border:1px solid var(--gold);
+    border-radius:50%;
+    background:#201b11;
+    color:var(--gold-light);
+    font-size:24px;
+    cursor:pointer;
+    z-index:2;
+}
+
+.modal-kicker {
+    color:var(--gold);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+.project-modal-content h2 {
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:clamp(27px,4vw,38px);
+    line-height:1.3;
+    margin-bottom:14px;
+}
+
+.modal-lead {
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.9;
+    margin-bottom:24px;
+}
+
+.modal-dashboard-image {
+    width:100%;
+    max-height:400px;
+    object-fit:contain;
+    background:#090909;
+    border:1px solid var(--border);
+    border-radius:5px;
+    margin:5px 0 26px;
+}
+
+.modal-detail-grid {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:18px;
+}
+
+.modal-detail-block {
+    padding:19px;
+    background:#1b1b1b;
+    border:1px solid var(--border);
+    border-radius:5px;
+}
+
+.modal-detail-block.full-width {
+    grid-column:1/-1;
+}
+
+.modal-detail-block h3 {
+    color:var(--gold-light);
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.modal-detail-block p,
+.modal-detail-block li {
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.9;
+}
+
+.modal-detail-block ul { padding-left:18px; }
+
+.modal-detail-block li { margin-bottom:5px; }
+
+.modal-note {
+    margin-top:20px;
+    color:#b9aa8b;
+    font-size:11px;
+    line-height:1.7;
+}
+
+body.modal-open { overflow:hidden; }
+
+/* CAREER */
+
+.career-box {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+    align-items:center;
+    padding:40px;
+    background:linear-gradient(120deg,#201b11,#121212);
+    border:1px solid #493c25;
+}
+
+.career-box h3 {
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:29px;
+    margin-bottom:14px;
+}
+
+.career-box p {
+    color:var(--muted);
+    font-size:13px;
+}
+
+.career-list { list-style:none; }
+
+.career-list li {
+    padding:12px 0;
+    border-bottom:1px solid #493c25;
+    color:#e4dfd4;
+    font-size:13px;
+}
+
+.career-list li::before {
+    content:"✦";
+    color:var(--gold);
+    margin-right:12px;
+}
+
+/* CONTACT */
+
+.contact-section { text-align:center; }
+
+.contact-section .section-intro {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.contact-grid {
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+    max-width:760px;
+    margin:35px auto 0;
+}
+
+.contact-card {
+    background:var(--card);
+    border:1px solid var(--border);
+    padding:22px 16px;
+    transition:.25s;
+    overflow-wrap:anywhere;
+}
+
+.contact-card:hover { border-color:var(--gold); }
+
+.contact-icon {
+    color:var(--gold);
+    font-size:21px;
+    margin-bottom:8px;
+}
+
+.contact-card h3 {
+    font-size:13px;
+    margin-bottom:7px;
+}
+
+.contact-card p {
+    color:var(--muted);
+    font-size:11px;
+}
+
+.contact-cta { margin-top:30px; }
+
+/* FOOTER */
+
+footer {
+    border-top:1px solid var(--border);
+    padding:25px 0;
+}
+
+.footer-inner {
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    align-items:center;
+}
+
+footer p {
+    color:var(--muted);
+    font-size:11px;
+}
+
+footer span { color:var(--gold); }
+
+.back-top {
+    color:var(--gold);
+    font-size:12px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:850px) {
+    .nav-links { gap:15px; }
+    .hero { gap:25px; }
+    .skills-grid { grid-template-columns:repeat(3,1fr); }
+    .about-grid { gap:35px; }
+    .career-box { padding:28px; }
+}
+
+@media(max-width:650px) {
+    .navbar { min-height:68px; }
+
+    .menu-btn { display:block; }
+
+    .nav-links {
+        display:none;
+        position:absolute;
+        top:68px;
+        left:0;
+        width:100%;
+        padding:20px 5%;
+        background:#111;
+        border-bottom:1px solid var(--border);
+        flex-direction:column;
+        align-items:flex-start;
+        gap:18px;
+    }
+
+    .nav-links.active { display:flex; }
+
+    .hero {
+        grid-template-columns:1fr;
+        padding:65px 0;
+        gap:55px;
+    }
+
+    .hero h1 { font-size:48px; }
+
+    .hero-visual { min-height:320px; }
+
+    .gold-frame,.initials-card {
+        width:235px;
+        height:290px;
+    }
+
+    .initials { font-size:85px; }
+
+    section.content-section { padding:70px 0; }
+
+    .about-grid { grid-template-columns:1fr; gap:22px; }
+
+    .skills-grid { grid-template-columns:repeat(2,1fr); }
+
+    .projects-grid { grid-template-columns:1fr; }
+
+    .career-box { grid-template-columns:1fr; padding:25px; }
+
+    .contact-grid { grid-template-columns:1fr; }
+
+    .footer-inner {
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .project-modal {
+        padding:10px;
+        align-items:flex-start;
+    }
+
+    .project-modal-content {
+        max-height:calc(100vh - 20px);
+        padding:23px 17px;
+        margin:auto 0;
+    }
+
+    .modal-detail-grid { grid-template-columns:1fr; }
+
+    .modal-detail-block.full-width { grid-column:auto; }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    *,*::before,*::after {
+        scroll-behavior:auto!important;
+        transition:none!important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+<nav class="navbar container">
+
+    <a href="#home" class="logo">AQSA<span>.</span></a>
+
+    <button class="menu-btn" id="menuBtn"
+            aria-label="Open navigation menu"
+            aria-expanded="false">☰</button>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">My Projects</a></li>
+        <li><a href="#career">Career</a></li>
+        <li><a href="#contact" class="nav-contact">Contact Me</a></li>
+    </ul>
+
+</nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero container" id="home">
+
+    <div class="hero-content">
+
+        <p class="eyebrow">MY PROFESSIONAL PORTFOLIO</p>
+
+        <h1>
+            Aqsa
+            <span>Hidayat.</span>
+        </h1>
+
+        <h2>BS Computer Science Student | Aspiring Data Analyst</h2>
+
+        <p class="hero-description">
+            I am a Computer Science student with a growing interest in
+            Business Intelligence, Power BI, E-commerce, and Digital
+            Technology. I enjoy working with data, organizing
+            information, and learning practical digital skills.
+        </p>
+
+        <div class="buttons">
+            <a href="#projects" class="btn btn-primary">
+                Explore My Projects ↗
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+                Get In Touch
+            </a>
+        </div>
+
+    </div>
+
+    <div class="hero-visual" aria-label="AQ monogram">
+
+        <div class="gold-frame"></div>
+
+        <div class="initials-card">
+            <div class="initials">AH</div>
+            <div class="initials-line"></div>
+            <p>DATA · DIGITAL · TECHNOLOGY</p>
+        </div>
+
+        <div class="floating-label">
+            COMPUTER SCIENCE · SEMESTER 6
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="content-section" id="about">
+
+<div class="container about-grid">
+
+    <div>
+        <p class="eyebrow">A LITTLE ABOUT ME</p>
+
+        <h2 class="section-heading">
+            Learning Today,<br>
+            <span>Building Tomorrow.</span>
+        </h2>
+
+        <p class="about-label">My Background</p>
+    </div>
+
+    <div class="about-text">
+
+        <p>Hi, I'm Aqsa Hidayat!</p>
+
+        <p>
+            I'm a Computer Science student with a growing interest
+            in Business Intelligence, E-commerce, and Digital
+            Technology.
+        </p>
+
+        <p>
+            I have experience working with Microsoft Office,
+            data entry, document formatting, and basic web
+            development. I'm also developing my skills in Power BI,
+            data visualization, and e-commerce management.
+        </p>
+
+        <p>
+            I'm passionate about learning new technologies,
+            solving problems, and creating practical digital
+            solutions. My goal is to use my skills to help
+            businesses work more efficiently and grow.
+        </p>
+
+        <div class="education-card">
+            <h3>BS Computer Science</h3>
+            <p>Kalam Bibi International Institute</p>
+            <p>Currently studying · 6th Semester</p>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+<!-- SKILLS -->
+
+<section class="content-section" id="skills">
+
+<div class="container">
+
+    <p class="eyebrow">WHAT I CAN DO</p>
+
+    <h2 class="section-heading">
+        My <span>Skills.</span>
+    </h2>
+
+    <p class="section-intro">
+        Skills and tools I use or am developing to support data,
+        administrative, e-commerce, and digital tasks.
+    </p>
+
+    <div class="skills-grid">
+
+        <div class="skill-card">
+            <span class="skill-number">01 / OFFICE</span>
+            <h3>Microsoft Excel</h3>
+        </div>
+
+        <div class="skill-card">
+            <span class="skill-number">02 / BI</span>
+            <h3>Power BI</h3>
+        </div>
+
+        <div class="skill-card">
+            <span class="skill-number">03 / OFFICE</span>
+            <h3>MS Office</h3>
+        </div>
+
+        <div class="skill-card">
+            <span class="skill-number">04 / DATA</span>
+            <h3>Data Entry</h3>
+        </div>
+
+        <div class="skill-card">
+            <span class="skill-number">05 / SUPPORT</span>
+            <h3>Virtual Assistant</h3>
+        </div>
+
+        <div class="skill-card">
+            <span class="skill-number">06 / BI</span>
+            <h3>Data Visualization</h3>
+        </div>
+
+        <div class="skill-card">
+            <span class="skill-number">07 / BI</span>
+            <h3>Dashboard Creation</h3>
+        </div>
+
+        <div class="skill-card">
+            <span class="skill-number">08 / DATA</span>
+            <h3>Data Cleaning</h3>
+        </div>
+
+        <div class="skill-card">
+            <span class="skill-number">09 / E-COMMERCE</span>
+            <h3>E-commerce Management</h3>
+        </div>
+
+        <div class="skill-card">
+            <span class="skill-number">10 / E-COMMERCE</span>
+            <h3>Product Listing</h3>
+        </div>
+
+        <div class="skill-card">
+            <span class="skill-number">11 / E-COMMERCE</span>
+            <h3>Shopify Basics</h3>
+        </div>
+
+        <div class="skill-card">
+            <span class="skill-number">12 / WEB</span>
+            <h3>Basic HTML Website Design</h3>
+        </div>
+
+    </div>
+
+    <p class="skill-note">
+        Skill levels are not represented as percentages so that
+        the portfolio does not imply unverified proficiency.
+    </p>
+
+</div>
+</section>
+
+<!-- MY PROJECTS -->
+
+<section class="content-section" id="projects">
+
+<div class="container">
+
+    <p class="eyebrow">SELECTED WORK</p>
+
+    <h2 class="section-heading">
+        My <span>Projects.</span>
+    </h2>
+
+    <p class="section-intro">
+        Explore my Power BI projects, including business intelligence
+        and academic data analysis. Click on any project to view
+        its complete description, tools, analysis, and key insights.
+    </p>
+
+    <div class="projects-grid">
+
+        <!-- PROJECT 1 -->
+
+        <article class="project-card">
+
+            <img src="retail-sales-dashboard.png.png"
+                 alt="Retail Sales Performance Dashboard"
+                 class="project-image">
+
+            <div class="project-top">
+                <span class="project-number">01</span>
+                <span class="project-symbol">↗</span>
+            </div>
+
+            <h3>Retail Sales Performance Dashboard</h3>
+
+            <p>
+                An interactive business intelligence dashboard
+                focused on analyzing retail revenue, costs,
+                profitability, monthly sales trends, city performance,
+                product categories, and top-selling products.
+            </p>
+
+            <div class="tags">
+                <span>Power BI</span>
+                <span>Excel</span>
+                <span>DAX</span>
+                <span>Data Analysis</span>
+            </div>
+
+            <button class="project-action"
+                    type="button"
+                    data-project="retail">
+                View Project Details ↗
+            </button>
+
+        </article>
+
+        <!-- PROJECT 2 -->
+
+        <article class="project-card">
+
+            <img src="Student perfomance.png.png"
+                 alt="Student Performance Dashboard"
+                 class="project-image">
+
+            <div class="project-top">
+                <span class="project-number">02</span>
+                <span class="project-symbol">↗</span>
+            </div>
+
+            <h3>Student Performance Dashboard</h3>
+
+            <p>
+                An academic data analytics dashboard designed to
+                explore student results, pass rates, average scores,
+                subject-wise performance, class comparisons,
+                and student achievement.
+            </p>
+
+            <div class="tags">
+                <span>Power BI</span>
+                <span>Excel</span>
+                <span>DAX</span>
+                <span>Education Analytics</span>
+            </div>
+
+            <button class="project-action"
+                    type="button"
+                    data-project="student">
+                View Project Details ↗
+            </button>
+
+        </article>
+
+    </div>
+
+    <p class="project-note">
+        Select View Project Details to explore each project's
+        objectives, tools, KPIs, analysis, and key findings.
+    </p>
+
+</div>
+</section>
+
+<!-- CAREER -->
+
+<section class="content-section" id="career">
+
+<div class="container">
+
+    <p class="eyebrow">MY NEXT CHAPTER</p>
+
+    <div class="career-box">
+
+        <div>
+
+            <h3>
+                Turning my interest into practical experience.
+            </h3>
+
+            <p>
+                I am interested in opportunities where I can
+                apply my current skills, learn from professionals,
+                and continue developing my technical abilities.
+            </p>
+
+            <div class="buttons">
+                <a href="#contact" class="btn btn-primary">
+                    Contact Me ↗
+                </a>
+            </div>
+
+        </div>
+
+        <ul class="career-list">
+            <li>Data Analyst Internships</li>
+            <li>Power BI & Business Intelligence</li>
+            <li>Data Visualization Projects</li>
+            <li>E-commerce & Administrative Support</li>
+        </ul>
+
+    </div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="content-section contact-section" id="contact">
+
+<div class="container">
+
+    <p class="eyebrow">LET'S CONNECT</p>
+
+    <h2 class="section-heading">
+        Have an Opportunity?<br>
+        <span>Let's Talk.</span>
+    </h2>
+
+    <p class="section-intro">
+        Feel free to contact me regarding internships,
+        entry-level opportunities, or professional connections.
+    </p>
+
+    <div class="contact-grid">
+
+        <a class="contact-card"
+           href="mailto:hk0954830@gmail.com">
+
+            <div class="contact-icon">✉</div>
+            <h3>Email</h3>
+            <p>hk0954830@gmail.com</p>
+
+        </a>
+
+        <a class="contact-card"
+           href="https://www.linkedin.com/in/aqsa-khan-3aa031444/"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            <div class="contact-icon">in</div>
+            <h3>LinkedIn</h3>
+            <p>Connect with me professionally ↗</p>
+
+        </a>
+
+    </div>
+
+    <div class="contact-cta">
+
+        <a href="mailto:hk0954830@gmail.com"
+           class="btn btn-primary">
+            Send Me an Email
+        </a>
+
+    </div>
+
+</div>
+</section>
+
+</main>
+
+<!-- PROJECT DETAILS POPUP -->
+
+<div class="project-modal"
+     id="projectModal"
+     role="dialog"
+     aria-modal="true"
+     aria-labelledby="modalTitle"
+     aria-hidden="true">
+
+    <div class="project-modal-content">
+
+        <button class="modal-close"
+                id="modalClose"
+                type="button"
+                aria-label="Close project details">
+            &times;
+        </button>
+
+        <p class="modal-kicker" id="modalKicker">
+            PROJECT DETAILS
+        </p>
+
+        <h2 id="modalTitle">Project Title</h2>
+
+        <p class="modal-lead" id="modalLead"></p>
+
+        <img class="modal-dashboard-image"
+             id="modalImage"
+             src=""
+             alt="Project dashboard screenshot">
+
+        <div class="modal-detail-grid" id="modalDetails"></div>
+
+        <p class="modal-note" id="modalNote"></p>
+
+    </div>
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer-inner">
+
+    <p>
+        © <span id="year"></span> Aqsa Hidayat. All rights reserved.
+    </p>
+
+    <p>
+        Designed with <span>◆</span> and a passion for technology.
+    </p>
+
+    <a href="#home" class="back-top">Back to top ↑</a>
+
+</div>
+</footer>
+
+<script>
+
+/* MOBILE NAVIGATION */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", function() {
+
+    const isOpen = navLinks.classList.toggle("active");
+
+    menuBtn.setAttribute("aria-expanded", isOpen);
+
+    menuBtn.textContent = isOpen ? "×" : "☰";
+
+});
+
+document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        navLinks.classList.remove("active");
+
+        menuBtn.setAttribute("aria-expanded", "false");
+
+        menuBtn.textContent = "☰";
+
+    });
+
+});
+
+/* FOOTER YEAR */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+/* PROJECT INFORMATION */
+
+const projectInformation = {
+
+    retail: {
+
+        kicker: "BUSINESS INTELLIGENCE PROJECT",
+
+        title: "Retail Sales Performance Dashboard",
+
+        lead: "An interactive Power BI dashboard developed to analyze retail business performance and transform sales data into meaningful business insights. It brings revenue, costs, profit, sales trends, city comparisons, category performance, and product results together in one view.",
+
+        image: "retail-sales-dashboard.png.png",
+
+        imageAlt: "Retail Sales Performance Dashboard",
+
+        note: "Figures are based on the displayed dashboard. Previous-year comparisons and percentage calculations should be validated against the underlying DAX measures before formal business reporting.",
+
+        sections: [
+
+            {
+                title: "Project Overview",
+                text: "The project focuses on analyzing retail sales data to understand business performance, monitor profitability, identify sales trends, and evaluate product and geographical performance."
+            },
+
+            {
+                title: "Project Objectives",
+                list: [
+                    "Monitor overall retail sales and profitability.",
+                    "Identify monthly revenue trends and fluctuations.",
+                    "Compare revenue across different cities.",
+                    "Evaluate product category performance.",
+                    "Identify top revenue-generating products.",
+                    "Support data-driven business decisions."
+                ]
+            },
+
+            {
+                title: "Tools & Technologies",
+                list: [
+                    "Microsoft Power BI – Dashboard development and visualization.",
+                    "Microsoft Excel – Source data and data preparation.",
+                    "DAX – KPI calculations and performance measurements.",
+                    "Data Analysis – Identifying patterns and business insights."
+                ]
+            },
+
+            {
+                title: "Key Performance Indicators",
+                list: [
+                    "Total Revenue: 11.70M",
+                    "Total Cost: 8.56M",
+                    "Total Profit: 2.74M",
+                    "Profit Margin: 32.04%",
+                    "Total Orders: Approximately 2K",
+                    "Total Quantity: Approximately 5K units."
+                ]
+            },
+
+            {
+                title: "Analysis Performed",
+                list: [
+                    "Monthly Revenue Trend Analysis.",
+                    "Revenue by City Analysis.",
+                    "Revenue by Product Category.",
+                    "Top 10 Revenue-Generating Products.",
+                    "Category-wise Revenue Contribution.",
+                    "Previous-Year Performance Comparison.",
+                    "Interactive Year, City, Category, and Channel filters."
+                ]
+            },
+
+            {
+                title: "Key Business Insights",
+                list: [
+                    "Mardan generated the highest city revenue at 1.76M.",
+                    "November recorded the highest monthly revenue at approximately 1.18M.",
+                    "October recorded the lowest monthly revenue at approximately 0.70M.",
+                    "Fashion was the largest category contributor at 27.64%.",
+                    "Front-Open Abaya was the top revenue-generating product at approximately 0.67M."
+                ]
+            },
+
+            {
+                title: "Business Impact",
+                text: "The dashboard helps business stakeholders monitor performance, understand revenue trends, compare geographical markets, evaluate product categories, and identify opportunities for sales improvement."
+            },
+
+            {
+                title: "Skills Demonstrated",
+                text: "Microsoft Power BI, Excel, DAX, KPI Development, Data Visualization, Trend Analysis, Comparative Analysis, and Business Intelligence."
+            }
+
+        ]
+
+    },
+
+
+    student: {
+
+        kicker: "EDUCATION DATA ANALYTICS PROJECT",
+
+        title: "Student Performance Dashboard",
+
+        lead: "An interactive academic analytics dashboard developed in Power BI to explore student results and compare performance across subjects, classes, gender groups, and parental education backgrounds.",
+
+        image: "Student perfomance.png.png",
+
+        imageAlt: "Student Performance Dashboard",
+
+        note: "The current screenshot shows a gauge value of 5308.1% and repeated 500 (20%) grade labels. These visuals should be corrected and validated in Power BI before publishing the dashboard as a final analytical result. The average score KPI displayed is 53.08.",
+
+        sections: [
+
+            {
+                title: "Project Overview",
+                text: "This project focuses on analyzing students' academic performance through an interactive Power BI dashboard. It provides an overview of student results and explores performance differences across various academic dimensions."
+            },
+
+            {
+                title: "Project Objectives",
+                list: [
+                    "Monitor overall student academic performance.",
+                    "Evaluate student pass rates and average scores.",
+                    "Compare performance across different subjects.",
+                    "Analyze class-wise academic results.",
+                    "Explore gender-wise performance differences.",
+                    "Examine parental education in relation to student achievement.",
+                    "Identify top-performing students."
+                ]
+            },
+
+            {
+                title: "Tools & Technologies",
+                list: [
+                    "Microsoft Power BI – Dashboard development and visualization.",
+                    "Microsoft Excel – Dataset management and data preparation.",
+                    "DAX – KPI calculations and analytical measures.",
+                    "Data Analysis – Academic trends and performance comparisons."
+                ]
+            },
+
+            {
+                title: "Key Performance Indicators",
+                list: [
+                    "Total Students: 500",
+                    "Pass Rate: 95%",
+                    "Average Score: 53.08",
+                    "Top Score: 78"
+                ]
+            },
+
+            {
+                title: "Analysis Performed",
+                list: [
+                    "Parent Education vs Student Performance.",
+                    "Grade Distribution.",
+                    "Overall Academic Performance.",
+                    "Class-wise Performance Comparison.",
+                    "Pass vs Fail Analysis.",
+                    "Subject-wise Average Scores in Science, Mathematics, and English.",
+                    "Gender-wise Average Performance.",
+                    "Top 10 Performing Students."
+                ]
+            },
+
+            {
+                title: "Key Academic Observations",
+                list: [
+                    "The dataset contains 500 student records.",
+                    "The displayed pass rate is 95%.",
+                    "The average student score is 53.08.",
+                    "The highest recorded score is 78.",
+                    "Subject-wise and gender-wise charts provide comparisons of academic performance.",
+                    "Parental education categories are included to explore their relationship with student results."
+                ]
+            },
+
+            {
+                title: "Educational Impact",
+                text: "The dashboard provides educators with an overview of academic performance and helps identify areas for further evaluation, academic support, and improvement."
+            },
+
+            {
+                title: "Skills Demonstrated",
+                text: "Microsoft Power BI, Excel, DAX, KPI Development, Academic Data Analysis, Data Visualization, Comparative Analysis, and Interactive Dashboard Development."
+            }
+
+        ]
+
+    }
+
+};
+
+
+/* POPUP ELEMENTS */
+
+const projectModal = document.getElementById("projectModal");
+
+const modalClose = document.getElementById("modalClose");
+
+const modalTitle = document.getElementById("modalTitle");
+
+const modalKicker = document.getElementById("modalKicker");
+
+const modalLead = document.getElementById("modalLead");
+
+const modalImage = document.getElementById("modalImage");
+
+const modalDetails = document.getElementById("modalDetails");
+
+const modalNote = document.getElementById("modalNote");
+
+let lastFocusedElement = null;
+
+
+/* OPEN PROJECT DETAILS */
+
+function openProjectDetails(projectKey) {
+
+    const project = projectInformation[projectKey];
+
+    if (!project) return;
+
+    lastFocusedElement = document.activeElement;
+
+    modalKicker.textContent = project.kicker;
+
+    modalTitle.textContent = project.title;
+
+    modalLead.textContent = project.lead;
+
+    modalImage.src = project.image;
+
+    modalImage.alt = project.imageAlt;
+
+    modalNote.textContent = project.note;
+
+    modalDetails.innerHTML = "";
+
+    project.sections.forEach(function(section, index) {
+
+        const block = document.createElement("section");
+
+        block.className = "modal-detail-block";
+
+        if (index === 0) {
+            block.classList.add("full-width");
+        }
+
+        const heading = document.createElement("h3");
+
+        heading.textContent = section.title;
+
+        block.appendChild(heading);
+
+        if (section.list) {
+
+            const list = document.createElement("ul");
+
+            section.list.forEach(function(item) {
+
+                const listItem = document.createElement("li");
+
+                listItem.textContent = item;
+
+                list.appendChild(listItem);
+
+            });
+
+            block.appendChild(list);
+
+        } else {
+
+            const paragraph = document.createElement("p");
+
+            paragraph.textContent = section.text;
+
+            block.appendChild(paragraph);
+
+        }
+
+        modalDetails.appendChild(block);
+
+    });
+
+    projectModal.classList.add("open");
+
+    projectModal.setAttribute("aria-hidden", "false");
+
+    document.body.classList.add("modal-open");
+
+    modalClose.focus();
+
+}
+
+
+/* CLOSE PROJECT DETAILS */
+
+function closeProjectDetails() {
+
+    projectModal.classList.remove("open");
+
+    projectModal.setAttribute("aria-hidden", "true");
+
+    document.body.classList.remove("modal-open");
+
+    if (lastFocusedElement) {
+        lastFocusedElement.focus();
+    }
+
+}
+
+
+/* PROJECT BUTTON CLICK EVENTS */
+
+document.querySelectorAll("[data-project]").forEach(function(button) {
+
+    button.addEventListener("click", function() {
+
+        const projectKey = button.getAttribute("data-project");
+
+        openProjectDetails(projectKey);
+
+    });
+
+});
+
+
+/* CLOSE BUTTON */
+
+modalClose.addEventListener("click", closeProjectDetails);
+
+
+/* CLOSE WHEN CLICKING OUTSIDE POPUP */
+
+projectModal.addEventListener("click", function(event) {
+
+    if (event.target === projectModal) {
+        closeProjectDetails();
+    }
+
+});
+
+
+/* CLOSE WITH ESCAPE KEY */
+
+document.addEventListener("keydown", function(event) {
+
+    if (
+        event.key === "Escape" &&
+        projectModal.classList.contains("open")
+    ) {
+        closeProjectDetails();
+    }
+
+});
+
+</script>
+
+</body>
+</html>
